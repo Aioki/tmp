@@ -1,0 +1,13 @@
+Проходим по бд и получаем предполагаемых родителей в формате QMap <int,QString>
+
+Валидатор:
+    Если строка неверная, то при смене элемента таблицы, фокус должен вернуться на исходную строку, currectvalue не меняется
+
+
+//TMP
+//Проверка корректности строки
+void MainWindow::is_Ok(QWidget * old, QWidget * new1)
+{
+    if (!ui->InputFIO->hasAcceptableInput() && ui->InputFIO == old)
+        QMessageBox::warning(this,"Корректность строки", "Строка введена неправильно");}
+

@@ -6,17 +6,425 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>827</width>
+    <height>483</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0" rowspan="2">
+     <widget class="QListWidget" name="listWidget">
+      <property name="currentRow">
+       <number>0</number>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>По умолчанию</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="FIO">
+        <item>
+         <widget class="QLabel" name="labelFIO">
+          <property name="minimumSize">
+           <size>
+            <width>401</width>
+            <height>18</height>
+           </size>
+          </property>
+          <property name="text">
+           <string> ФИО</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="InputFIO">
+          <property name="minimumSize">
+           <size>
+            <width>401</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="maxLength">
+           <number>80</number>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QGroupBox" name="GroupParent">
+        <property name="title">
+         <string>Родители</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Отец</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QComboBox" name="cb_Dad">
+           <item>
+            <property name="text">
+             <string>Не задано</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Мать</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QComboBox" name="cb_Mum">
+           <item>
+            <property name="text">
+             <string>Не задано</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkServe">
+        <property name="text">
+         <string>Состоял(а) на военной службе</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="GroupSex">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Пол</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QRadioButton" name="ButtonMale">
+             <property name="minimumSize">
+              <size>
+               <width>57</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>57</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>муж.</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="ButtonFemale">
+             <property name="minimumSize">
+              <size>
+               <width>57</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>57</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>жен.</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QVBoxLayout" name="BDay">
+            <item>
+             <widget class="QLabel" name="labelBirthday">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="text">
+               <string> Дата рождения</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="dateBirth">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QCheckBox" name="checkLive">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Жив</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelDieday">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Дата смерти</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="dateDie">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="2">
+         <widget class="QGroupBox" name="Citizenship">
+          <property name="title">
+           <string>Гражданство</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QRadioButton" name="ButtonRussia">
+             <property name="minimumSize">
+              <size>
+               <width>86</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="tabletTracking">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Россия</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="ButtonUkraine">
+             <property name="minimumSize">
+              <size>
+               <width>86</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Украина</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="ButtonPoland">
+             <property name="minimumSize">
+              <size>
+               <width>86</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Польша</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="ButtonGermany">
+             <property name="minimumSize">
+              <size>
+               <width>86</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Германия</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="ButtonAdd">
+      <property name="text">
+       <string>Создать</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="ButtonDelete">
+      <property name="text">
+       <string>Удалить</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>827</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="createFile"/>
+    <addaction name="openFile"/>
+    <addaction name="saveFile"/>
+    <addaction name="saveAsFile"/>
+    <addaction name="separator"/>
+    <addaction name="aboutProgram"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="saveFile">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="openFile">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
+  <action name="saveAsFile">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+  </action>
+  <action name="createFile">
+   <property name="text">
+    <string>Создать</string>
+   </property>
+  </action>
+  <action name="aboutProgram">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>checkLive</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>dateDie</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>675</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>675</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

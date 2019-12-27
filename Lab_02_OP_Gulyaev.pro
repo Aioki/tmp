@@ -16,11 +16,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    database.cpp \
+    familytree.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    validatorfio.cpp
 
 HEADERS += \
-    mainwindow.h
+    database.h \
+    familytree.h \
+    mainwindow.h \
+    validatorfio.h
 
 FORMS += \
     mainwindow.ui
@@ -29,3 +35,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    ToDo
